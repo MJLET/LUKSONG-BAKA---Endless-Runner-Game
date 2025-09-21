@@ -21,7 +21,7 @@ You can host this game directly with **GitHub Pages**:
 2. Go to your repository **Settings → Pages**.
 3. Set the source to your main branch and root folder.
 4. Access your game at:  
-   `[https://yourusername.github.io/luksong-baka/](https://github.com/MJLET/LUKSONG-BAKA---Endless-Runner-Game.git`  
+   `https://github.com/MJLET/LUKSONG-BAKA---Endless-Runner-Game.git`  
 
 Click **Start Game** to begin and enjoy!  
 
