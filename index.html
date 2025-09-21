@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Luksong Baka</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game">
+    <!-- Clouds and sun -->
+    <div class="cloud cloud1"></div>
+    <div class="cloud cloud2"></div>
+    <div class="cloud cloud3"></div>
+    <div class="sun"></div>
+
+    <!-- Runner and ground -->
+    <div id="runner" class="runner">👦</div>
+    <div id="ground"></div>
+    <div id="obstacles"></div>
+    <div id="score">0</div>
+
+    <!-- High score (JS will append) -->
+
+    <!-- Game over overlay -->
+    <div id="gameOver" class="overlay hidden">
+      <h2>Game Over</h2>
+      <p>Score: <span id="finalScore">0</span></p>
+      <button id="restart">Restart</button>
+    </div>
+
+    <!-- Start / info overlay -->
+    <div id="startScreen" class="overlay">
+      <h1>LUKSONG BAKA</h1>
+      <p><strong>About:</strong> Luksong Baka is a traditional Filipino jumping game where players jump over "cows" without touching them. Test your reflexes and try to beat your high score!</p>
+      <p><strong>Controls:</strong> Press <strong>Spacebar</strong> or <strong>Tap</strong> to jump.</p>
+      <p><strong>Goal:</strong> Avoid cows and get as high a score as possible.</p>
+      <div class="preview">
+        <span style="font-size:50px;">👦</span>
+        <span style="font-size:50px;">🐄</span>
+      </div>
+      <button id="startBtn">Start Game</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

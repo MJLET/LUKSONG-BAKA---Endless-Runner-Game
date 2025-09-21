@@ -1,0 +1,142 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #87ceeb 50%, #3cb043 50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.game {
+  position: relative;
+  width: 800px;
+  height: 400px; /* start screen height */
+  overflow: hidden;
+  border: 2px solid #333;
+  background: transparent;
+  transition: height 0.5s ease;
+}
+
+/* Runner */
+.runner {
+  position: absolute;
+  bottom: 40px;
+  left: 50px;
+  font-size: 40px;
+}
+
+/* Ground */
+#ground {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background: #2a7c2a;
+}
+
+/* Obstacles */
+#obstacles {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  width: 100%;
+  height: 60px;
+}
+.obstacle {
+  position: absolute;
+  bottom: 0;
+  font-size: 40px;
+}
+
+/* Clouds */
+.cloud {
+  position: absolute;
+  background: #fff;
+  border-radius: 50%;
+  opacity: 0.9;
+}
+.cloud::before,
+.cloud::after {
+  content: '';
+  position: absolute;
+  background: #fff;
+  border-radius: 50%;
+}
+.cloud1 { width: 60px; height: 60px; top: 40px; left: -100px; animation: moveCloud 50s linear infinite; }
+.cloud1::before { width: 40px; height: 40px; top: 10px; left: -25px; }
+.cloud1::after { width: 40px; height: 40px; top: 10px; left: 45px; }
+
+.cloud2 { width: 40px; height: 40px; top: 80px; left: -200px; animation: moveCloud 60s linear infinite; }
+.cloud2::before { width: 25px; height: 25px; top: 5px; left: -15px; }
+.cloud2::after { width: 25px; height: 25px; top: 5px; left: 30px; }
+
+.cloud3 { width: 50px; height: 50px; top: 30px; left: -300px; animation: moveCloud 70s linear infinite; }
+.cloud3::before { width: 30px; height: 30px; top: 5px; left: -20px; }
+.cloud3::after { width: 30px; height: 30px; top: 5px; left: 40px; }
+
+@keyframes moveCloud { from { transform: translateX(0); } to { transform: translateX(1000px); } }
+
+/* Sun */
+.sun {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background: yellow;
+  border-radius: 50%;
+  box-shadow: 0 0 30px rgba(255, 255, 0, 0.7);
+}
+
+/* Score */
+#score {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* High score */
+#highScore {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Overlay screens */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.95);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 10;
+}
+.hidden { display: none; }
+
+/* Start / info overlay */
+#startScreen h1 { font-size: 36px; margin-bottom: 15px; }
+#startScreen p { font-size: 16px; margin: 5px 0; }
+#startScreen button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  border: none;
+  background-color: #3cb043;
+  color: white;
+  border-radius: 8px;
+}
+#startScreen .preview { margin: 15px 0; }
